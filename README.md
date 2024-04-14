@@ -185,15 +185,15 @@ ORDER BY NumberOfTransactions DESC;
 
 **1.Product Variety:** A diverse range of product lines suggests Walmart caters to a broad customer base, which is critical for market reach and consumer satisfaction.
 
-![query1result](Project_Sales_Analysis\assets\Prod1.PNG)
+![query1result](Project_Sales_Analysis/assets/Prod1.PNG)
 
 **2.Top Seller:** Identifying the most sold product line allows Walmart to focus on keeping popular items in stock and managing inventory efficiently.
 
-![query2result](Project_Sales_Analysis\assets\Prod2.PNG)
+![query2result](Project_Sales_Analysis/assets/Prod2.PNG)
 
 **Revenue Trends:** Monthly revenue figures can pinpoint peak sales periods, guiding inventory and marketing efforts to capitalize on these times.
 
-![query3result](Project_Sales_Analysis\assets\Prod3.PNG)
+![query3result](Project_Sales_Analysis/assets/Prod3.PNG)
 
 **Cost Analysis:** Knowing which months have higher COGS can aid in budgeting and cost-saving strategies.
 
@@ -201,37 +201,37 @@ ORDER BY NumberOfTransactions DESC;
 
 **Revenue Leaders:** Recognizing product lines with the highest revenue can help prioritize marketing and sales efforts.
 
-![query5result](Project_Sales_Analysis\assets\Prod5.PNG)
+![query5result](Project_Sales_Analysis/assets/Prod5.PNG)
 
 **City Performance:** Cities generating more revenue might reveal successful regional strategies or market preferences.
 
-![query6result](Project_Sales_Analysis\assets\Prod6.PNG)
+![query6result](Project_Sales_Analysis/assets/Prod6.PNG)
 
 **Tax Insights:** Products with higher VAT implications may affect pricing strategies and customer purchasing decisions.
 
-![query7result](Project_Sales_Analysis\assets\Prod7.PNG)
+![query7result](Project_Sales_Analysis/assets/Prod7.PNG)
 
 **Sales Performance:** Classifying product lines as 'Good' or 'Bad' based on sales can direct focus to improving or promoting certain lines.
 
-![query8result](Project_Sales_Analysis\assets\Prod8.PNG)
+![query8result](Project_Sales_Analysis/assets/Prod8.PNG)
 
 **Branch Analysis:** Branches selling above average can provide insights into successful sales tactics or customer preferences.
 
-![query9result](Project_Sales_Analysis\assets\Prod9.PNG)
+![query9result](Project_Sales_Analysis/assets/Prod9.PNG)
 
 **Gender Preferences:** Different product popularity among genders can guide targeted marketing campaigns.
 
-![query10result](Project_Sales_Analysis\assets\Prod10.PNG)
+![query10result](Project_Sales_Analysis/assets/Prod10.PNG)
 
 
 **Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.
 
-![query11result](Project_Sales_Analysis\assets\Prod11.PNG)
+![query11result](Project_Sales_Analysis/assets/Prod11.PNG)
 
 
 **Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives.
 
-![query12result](Project_Sales_Analysis\assets\Prod12.PNG)
+![query12result](Project_Sales_Analysis/assets/Prod12.PNG)
 
 
 
