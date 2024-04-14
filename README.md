@@ -183,53 +183,53 @@ ORDER BY NumberOfTransactions DESC;
 ```
 ## Insights: 
 
-**1.Product Variety:** A diverse range of product lines suggests Walmart caters to a broad customer base, which is critical for market reach and consumer satisfaction.
+**1.Product Variety:** Walmart's diverse range of product lines demonstrates its commitment to meeting diverse consumer needs, enhancing market penetration and customer contentment.
 
 ![query1result](Project_Sales_Analysis/assets/Prod1.PNG)
 
-**2.Top Seller:** Identifying the most sold product line allows Walmart to focus on keeping popular items in stock and managing inventory efficiently.
+**2.Top Seller:** Electronic accessories emerge as Walmart's top-selling category, indicating a strong market preference and highlighting the importance of focused inventory management in this high-demand sector.
 
 ![query2result](Project_Sales_Analysis/assets/Prod2.PNG)
 
-**3.Revenue Trends:** Monthly revenue figures can pinpoint peak sales periods, guiding inventory and marketing efforts to capitalize on these times.
+**3.Revenue Trends:** January leads in sales for Walmart, indicating a post-holiday surge in revenue, which could inform strategic stock and marketing plans for future years.
 
 ![query3result](Project_Sales_Analysis/assets/Prod3.PNG)
 
-**4.Cost Analysis:** Knowing which months have higher COGS can aid in budgeting and cost-saving strategies.
+**4.Cost Analysis:** January's highest COGS suggests a potential inventory buildup in anticipation of holiday sales, highlighting opportunities for more efficient inventory management.
 
 ![query4result](Project_Sales_Analysis/assets/Prod4.PNG)
 
-**5.Revenue Leaders:** Recognizing product lines with the highest revenue can help prioritize marketing and sales efforts.
+**5.Revenue Leaders:** Food and beverages lead Walmart's revenue, suggesting a high turnover sector that may benefit from focused promotional strategies and inventory optimization.
 
 ![query5result](Project_Sales_Analysis/assets/Prod5.PNG)
 
-**6.City Performance:** Cities generating more revenue might reveal successful regional strategies or market preferences.
+**6.City Performance:** Naypyitaw's branch leads in revenue, indicating a potential hotspot for Walmart's sales and a prime candidate for further investment and market analysis.
 
 ![query6result](Project_Sales_Analysis/assets/Prod6.PNG)
 
-**7.Tax Insights:** Products with higher VAT implications may affect pricing strategies and customer purchasing decisions.
+**7.Tax Insights:** Home and lifestyle products face the highest VAT rates, suggesting a need for Walmart to possibly reevaluate pricing strategies within this category to maintain customer appeal.
 
 ![query7result](Project_Sales_Analysis/assets/Prod7.PNG)
 
-**8.Sales Performance:** Classifying product lines as 'Good' or 'Bad' based on sales can direct focus to improving or promoting certain lines.
+**8.Sales Performance:** Home and lifestyle, along with electronic accessories, stand out with 'Good' sales performance, while food and fashion accessories may require strategic enhancements to boost sales. 
 
 ![query8result](Project_Sales_Analysis/assets/Prod8.PNG)
 
-**9.Branch Analysis:** Branches selling above average can provide insights into successful sales tactics or customer preferences.
+**9.Branch Analysis:** Branch A leads in quantity sold, suggesting successful sales strategies or a strong market presence.
 
 ![query9result](Project_Sales_Analysis/assets/Prod9.PNG)
 
-**10.Gender Preferences:** Different product popularity among genders can guide targeted marketing campaigns.
+**10.Gender Preferences:** Fashion accessories are particularly popular among female shoppers, while health and beauty products are favored by males, highlighting gender-specific market trends for targeted advertising.
 
 ![query10result](Project_Sales_Analysis/assets/Prod10.PNG)
 
 
-**11.Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.
+**11.Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.Food and beverages receive the highest customer ratings at Walmart, indicating strong satisfaction.
 
 ![query11result](Project_Sales_Analysis/assets/Prod11.PNG)
 
 
-**12.Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives.
+**12.Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives. We can see that cash and eWallet are nearly tied as the preferred payment methods, signaling a potential shift in payment trends.
 
 ![query12result](Project_Sales_Analysis/assets/Prod12.PNG)
 
