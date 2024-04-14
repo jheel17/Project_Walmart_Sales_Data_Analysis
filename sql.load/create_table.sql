@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS sales (
+  InvoiceID VARCHAR(50) NOT NULL,
+  Branch CHAR(1),
+  City VARCHAR(50),
+  CustomerType VARCHAR(50),
+  Gender ENUM('Male', 'Female'),
+  ProductLine VARCHAR(100),
+  UnitPrice DECIMAL(10, 2),
+  Quantity INT,
+  Tax5Percent DECIMAL(10, 2),
+  Total DECIMAL(10, 2),
+  SaleDate DATE,
+  SaleTime TIME,
+  PaymentType ENUM('Ewallet', 'Cash', 'Credit Card'),
+  COGS DECIMAL(10, 2),
+  GrossMarginPercentage DECIMAL(10, 6),
+  GrossIncome DECIMAL(10, 2),
+  Rating DECIMAL(10, 1),
+  PRIMARY KEY (InvoiceID)
+);
