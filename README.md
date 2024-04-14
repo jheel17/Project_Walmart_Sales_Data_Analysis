@@ -63,7 +63,195 @@ The project is segmented into various analyses, each focusing on specific aspect
 
 - **Exploratory Data Analysis (EDA)**: In-depth data probing to respond to the investigative queries listed.
 
-## Analysis:
+
+# Product Analysis: 
+
+Conducted analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
+
+### Business Question Answered:
+
+1. How many unique product lines does the data have?
+2. What is the most selling product line?
+3. What is the total revenue by month?
+4. What month had the largest COGS?
+5. What product line had the largest revenue?
+6. What is the city with the largest revenue?
+7. What product line had the largest VAT?
+8. Categorize each product line as "Good" or "Bad" based on its average sales     compared to the overall average sales of all product lines.
+9. Which branch sold more products than average product sold?
+10. What is the most common product line by gender?
+11. What is the average rating of each product line?
+12. What is the most common payment method?
+
+```sql
+-- 1.How many unique product lines does the data have?
+SELECT
+	DISTINCT product_line
+FROM sales;
+
+-- 2.What is the most selling product line?
+SELECT
+	SUM(quantity) as qty,
+    product_line
+FROM sales
+GROUP BY product_line
+ORDER BY qty DESC;
+
+-- 3.What is the total revenue by month?
+SELECT
+	month_name AS month,
+	SUM(total) AS total_revenue
+FROM sales
+GROUP BY month_name 
+ORDER BY total_revenue;
+
+-- 4.What month had the largest COGS?
+SELECT
+	month_name AS month,
+	SUM(cogs) AS cogs
+FROM sales
+GROUP BY month_name 
+ORDER BY cogs;
+
+-- 5.What product line had the largest revenue?
+SELECT
+	product_line,
+	SUM(total) as total_revenue
+FROM sales
+GROUP BY product_line
+ORDER BY total_revenue DESC;
+
+-- 6.What is the city with the largest revenue?
+SELECT
+	branch,
+	city,
+	SUM(total) AS total_revenue
+FROM sales
+GROUP BY city, branch 
+ORDER BY total_revenue;
+
+-- 7.What product line had the largest VAT?
+SELECT
+	product_line,
+	AVG(tax_pct) as avg_tax
+FROM sales
+GROUP BY product_line
+ORDER BY avg_tax DESC;
+
+-- 8.Categorize each product line as "Good" or "Bad" based on its 
+--average sales compared to the overall average sales of all product line
+
+SELECT 
+  product_line,
+  CASE
+    WHEN AVG(quantity) > (SELECT AVG(quantity) FROM sales) THEN 'Good'
+    ELSE 'Bad'
+  END AS remark
+FROM sales
+GROUP BY product_line;
+
+-- 9.Which branch sold more products than average product sold?
+SELECT 
+	branch, 
+    SUM(quantity) AS qnty
+FROM sales
+GROUP BY branch
+HAVING SUM(quantity) > (SELECT AVG(quantity) FROM sales);
+
+-- 10.What is the most common product line by gender?
+SELECT
+	gender,
+    product_line,
+    COUNT(gender) AS total_cnt
+FROM sales
+GROUP BY gender, product_line
+ORDER BY total_cnt DESC;
+
+-- 11.What is the average rating of each product line?
+SELECT
+	ROUND(AVG(rating), 2) as avg_rating,
+    product_line
+FROM sales
+GROUP BY product_line
+ORDER BY avg_rating DESC;
+
+-- 12.What is the most common payment method?
+SELECT Payment, COUNT(*) AS NumberOfTransactions
+FROM sales
+GROUP BY Payment
+ORDER BY NumberOfTransactions DESC;
+```
+## Insights: 
+
+**1.Product Variety:** A diverse range of product lines suggests Walmart caters to a broad customer base, which is critical for market reach and consumer satisfaction.
+
+![query1result](Project_Sales_Analysis\assets\Prod1.PNG)
+
+**2.Top Seller:** Identifying the most sold product line allows Walmart to focus on keeping popular items in stock and managing inventory efficiently.
+
+![query2result](Project_Sales_Analysis\assets\Prod2.PNG)
+
+**Revenue Trends:** Monthly revenue figures can pinpoint peak sales periods, guiding inventory and marketing efforts to capitalize on these times.
+
+![query3result](Project_Sales_Analysis\assets\Prod3.PNG)
+
+**Cost Analysis:** Knowing which months have higher COGS can aid in budgeting and cost-saving strategies.
+
+![query4result](Project_Sales_Analysis/assets/Prod4.PNG)
+
+**Revenue Leaders:** Recognizing product lines with the highest revenue can help prioritize marketing and sales efforts.
+
+![query5result](Project_Sales_Analysis\assets\Prod5.PNG)
+
+**City Performance:** Cities generating more revenue might reveal successful regional strategies or market preferences.
+
+![query6result](Project_Sales_Analysis\assets\Prod6.PNG)
+
+**Tax Insights:** Products with higher VAT implications may affect pricing strategies and customer purchasing decisions.
+
+![query7result](Project_Sales_Analysis\assets\Prod7.PNG)
+
+**Sales Performance:** Classifying product lines as 'Good' or 'Bad' based on sales can direct focus to improving or promoting certain lines.
+
+![query8result](Project_Sales_Analysis\assets\Prod8.PNG)
+
+**Branch Analysis:** Branches selling above average can provide insights into successful sales tactics or customer preferences.
+
+![query9result](Project_Sales_Analysis\assets\Prod9.PNG)
+
+**Gender Preferences:** Different product popularity among genders can guide targeted marketing campaigns.
+
+![query10result](Project_Sales_Analysis\assets\Prod10.PNG)
+
+
+**Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.
+
+![query11result](Project_Sales_Analysis\assets\Prod11.PNG)
+
+
+**Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives.
+
+![query12result](Project_Sales_Analysis\assets\Prod12.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Conclusions and Business Insights
 
