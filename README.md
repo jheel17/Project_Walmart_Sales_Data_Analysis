@@ -68,7 +68,7 @@ The project is segmented into various analyses, each focusing on specific aspect
 
 Conducted analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
 
-### Business Question Answered:
+### Business Questions Answered:
 
 1. How many unique product lines does the data have?
 2. What is the most selling product line?
@@ -191,45 +191,45 @@ ORDER BY NumberOfTransactions DESC;
 
 ![query2result](Project_Sales_Analysis/assets/Prod2.PNG)
 
-**Revenue Trends:** Monthly revenue figures can pinpoint peak sales periods, guiding inventory and marketing efforts to capitalize on these times.
+**3.Revenue Trends:** Monthly revenue figures can pinpoint peak sales periods, guiding inventory and marketing efforts to capitalize on these times.
 
 ![query3result](Project_Sales_Analysis/assets/Prod3.PNG)
 
-**Cost Analysis:** Knowing which months have higher COGS can aid in budgeting and cost-saving strategies.
+**4.Cost Analysis:** Knowing which months have higher COGS can aid in budgeting and cost-saving strategies.
 
 ![query4result](Project_Sales_Analysis/assets/Prod4.PNG)
 
-**Revenue Leaders:** Recognizing product lines with the highest revenue can help prioritize marketing and sales efforts.
+**5.Revenue Leaders:** Recognizing product lines with the highest revenue can help prioritize marketing and sales efforts.
 
 ![query5result](Project_Sales_Analysis/assets/Prod5.PNG)
 
-**City Performance:** Cities generating more revenue might reveal successful regional strategies or market preferences.
+**6.City Performance:** Cities generating more revenue might reveal successful regional strategies or market preferences.
 
 ![query6result](Project_Sales_Analysis/assets/Prod6.PNG)
 
-**Tax Insights:** Products with higher VAT implications may affect pricing strategies and customer purchasing decisions.
+**7.Tax Insights:** Products with higher VAT implications may affect pricing strategies and customer purchasing decisions.
 
 ![query7result](Project_Sales_Analysis/assets/Prod7.PNG)
 
-**Sales Performance:** Classifying product lines as 'Good' or 'Bad' based on sales can direct focus to improving or promoting certain lines.
+**8.Sales Performance:** Classifying product lines as 'Good' or 'Bad' based on sales can direct focus to improving or promoting certain lines.
 
 ![query8result](Project_Sales_Analysis/assets/Prod8.PNG)
 
-**Branch Analysis:** Branches selling above average can provide insights into successful sales tactics or customer preferences.
+**9.Branch Analysis:** Branches selling above average can provide insights into successful sales tactics or customer preferences.
 
 ![query9result](Project_Sales_Analysis/assets/Prod9.PNG)
 
-**Gender Preferences:** Different product popularity among genders can guide targeted marketing campaigns.
+**10.Gender Preferences:** Different product popularity among genders can guide targeted marketing campaigns.
 
 ![query10result](Project_Sales_Analysis/assets/Prod10.PNG)
 
 
-**Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.
+**11.Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.
 
 ![query11result](Project_Sales_Analysis/assets/Prod11.PNG)
 
 
-**Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives.
+**12.Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives.
 
 ![query12result](Project_Sales_Analysis/assets/Prod12.PNG)
 
