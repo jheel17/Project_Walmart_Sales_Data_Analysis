@@ -68,7 +68,7 @@ The project is segmented into various analyses, each focusing on specific aspect
 
 Conducted analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
 
-### Business Questions Answered:
+## Business Questions Answered:
 
 1. How many unique product lines does the data have?
 2. What is the most selling product line?
@@ -187,37 +187,46 @@ ORDER BY NumberOfTransactions DESC;
 
 ![query1result](Project_Sales_Analysis/assets/Prod1.PNG)
 
+
 **2.Top Seller:** Electronic accessories emerge as Walmart's top-selling category, indicating a strong market preference and highlighting the importance of focused inventory management in this high-demand sector.
 
 ![query2result](Project_Sales_Analysis/assets/Prod2.PNG)
+
 
 **3.Revenue Trends:** January leads in sales for Walmart, indicating a post-holiday surge in revenue, which could inform strategic stock and marketing plans for future years.
 
 ![query3result](Project_Sales_Analysis/assets/Prod3.PNG)
 
+
 **4.Cost Analysis:** January's highest COGS suggests a potential inventory buildup in anticipation of holiday sales, highlighting opportunities for more efficient inventory management.
 
 ![query4result](Project_Sales_Analysis/assets/Prod4.PNG)
+
 
 **5.Revenue Leaders:** Food and beverages lead Walmart's revenue, suggesting a high turnover sector that may benefit from focused promotional strategies and inventory optimization.
 
 ![query5result](Project_Sales_Analysis/assets/Prod5.PNG)
 
+
 **6.City Performance:** Naypyitaw's branch leads in revenue, indicating a potential hotspot for Walmart's sales and a prime candidate for further investment and market analysis.
 
 ![query6result](Project_Sales_Analysis/assets/Prod6.PNG)
+
 
 **7.Tax Insights:** Home and lifestyle products face the highest VAT rates, suggesting a need for Walmart to possibly reevaluate pricing strategies within this category to maintain customer appeal.
 
 ![query7result](Project_Sales_Analysis/assets/Prod7.PNG)
 
+
 **8.Sales Performance:** Home and lifestyle, along with electronic accessories, stand out with 'Good' sales performance, while food and fashion accessories may require strategic enhancements to boost sales. 
 
 ![query8result](Project_Sales_Analysis/assets/Prod8.PNG)
 
+
 **9.Branch Analysis:** Branch A leads in quantity sold, suggesting successful sales strategies or a strong market presence.
 
 ![query9result](Project_Sales_Analysis/assets/Prod9.PNG)
+
 
 **10.Gender Preferences:** Fashion accessories are particularly popular among female shoppers, while health and beauty products are favored by males, highlighting gender-specific market trends for targeted advertising.
 
@@ -234,9 +243,94 @@ ORDER BY NumberOfTransactions DESC;
 ![query12result](Project_Sales_Analysis/assets/Prod12.PNG)
 
 
+# Customer Analysis:
+
+This analysis seeks to decipher the sales trends across various product categories, providing insights into the efficacy of current sales strategies. The findings will guide necessary adjustments to enhance sales performance and drive revenue growth.
+
+## Business Questions Answered:
+
+## Business Questions Answered:
+
+1. What is the most common customer type?
+2. Which customer type buys the most?
+3. What is the gender of most of the customers?
+4. What is the gender distribution per branch?
+5. Which time of the day do customers give most ratings?
+6. Which time of the day do customers give most ratings per branch?
+7. Which day fo the week has the best avg ratings?
+8. Which day of the week has the best average ratings per branch?
+
+```sql
+-- 1. Which are the most common customer types?
+
+SELECT
+  customer_type,
+  COUNT(*) AS count
+FROM sales
+GROUP BY customer_type
+ORDER BY count DESC;
+
+-- 2. Which customer type buys the most?
+SELECT
+  customer_type,
+  SUM(quantity) AS total_quantity
+FROM sales
+GROUP BY customer_type
+ORDER BY total_quantity DESC
+LIMIT 1;
 
 
+-- 3. What is the gender of most of the customers?
+SELECT
+	gender,
+	COUNT(*) as gender_cnt
+FROM sales
+GROUP BY gender
+ORDER BY gender_cnt DESC;
 
+-- 4. What is the gender distribution per branch?
+SELECT
+	gender,
+	COUNT(*) as gender_cnt
+FROM sales
+WHERE branch = "C"
+GROUP BY gender
+ORDER BY gender_cnt DESC;
+
+-- 5. Which time of the day do customers give most ratings?
+SELECT
+	time_of_day,
+	AVG(rating) AS avg_rating
+FROM sales
+GROUP BY time_of_day
+ORDER BY avg_rating DESC;
+
+-- 6. Which time of the day do customers give most ratings per branch?
+SELECT
+	time_of_day,
+	AVG(rating) AS avg_rating
+FROM sales
+WHERE branch = "A"
+GROUP BY time_of_day
+ORDER BY avg_rating DESC;
+
+-- 7. Which day fo the week has the best avg ratings?
+SELECT
+	day_name,
+	AVG(rating) AS avg_rating
+FROM sales
+GROUP BY day_name 
+ORDER BY avg_rating DESC;
+
+-- 8. Which day of the week has the best average ratings per branch?
+SELECT 
+	day_name,
+	COUNT(day_name) total_sales
+FROM sales
+WHERE branch = "C"
+GROUP BY day_name
+ORDER BY total_sales DESC;
+```
 
 
 
