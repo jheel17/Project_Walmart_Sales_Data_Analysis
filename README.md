@@ -185,62 +185,62 @@ ORDER BY NumberOfTransactions DESC;
 
 **1.Product Variety:** Walmart's diverse range of product lines demonstrates its commitment to meeting diverse consumer needs, enhancing market penetration and customer contentment.
 
-![query1result](Project_Sales_Analysis/assets/Prod1.PNG)
+![query1result](Project_Sales_Analysis/assets1/Prod1.PNG)
 
 
 **2.Top Seller:** Electronic accessories emerge as Walmart's top-selling category, indicating a strong market preference and highlighting the importance of focused inventory management in this high-demand sector.
 
-![query2result](Project_Sales_Analysis/assets/Prod2.PNG)
+![query2result](Project_Sales_Analysis/assets1/Prod2.PNG)
 
 
 **3.Revenue Trends:** January leads in sales for Walmart, indicating a post-holiday surge in revenue, which could inform strategic stock and marketing plans for future years.
 
-![query3result](Project_Sales_Analysis/assets/Prod3.PNG)
+![query3result](Project_Sales_Analysis/assets1/Prod3.PNG)
 
 
 **4.Cost Analysis:** January's highest COGS suggests a potential inventory buildup in anticipation of holiday sales, highlighting opportunities for more efficient inventory management.
 
-![query4result](Project_Sales_Analysis/assets/Prod4.PNG)
+![query4result](Project_Sales_Analysis/assets1/Prod4.PNG)
 
 
 **5.Revenue Leaders:** Food and beverages lead Walmart's revenue, suggesting a high turnover sector that may benefit from focused promotional strategies and inventory optimization.
 
-![query5result](Project_Sales_Analysis/assets/Prod5.PNG)
+![query5result](Project_Sales_Analysis/assets1/Prod5.PNG)
 
 
 **6.City Performance:** Naypyitaw's branch leads in revenue, indicating a potential hotspot for Walmart's sales and a prime candidate for further investment and market analysis.
 
-![query6result](Project_Sales_Analysis/assets/Prod6.PNG)
+![query6result](Project_Sales_Analysis/assets1/Prod6.PNG)
 
 
 **7.Tax Insights:** Home and lifestyle products face the highest VAT rates, suggesting a need for Walmart to possibly reevaluate pricing strategies within this category to maintain customer appeal.
 
-![query7result](Project_Sales_Analysis/assets/Prod7.PNG)
+![query7result](Project_Sales_Analysis/assets1/Prod7.PNG)
 
 
 **8.Sales Performance:** Home and lifestyle, along with electronic accessories, stand out with 'Good' sales performance, while food and fashion accessories may require strategic enhancements to boost sales. 
 
-![query8result](Project_Sales_Analysis/assets/Prod8.PNG)
+![query8result](Project_Sales_Analysis/assets1/Prod8.PNG)
 
 
 **9.Branch Analysis:** Branch A leads in quantity sold, suggesting successful sales strategies or a strong market presence.
 
-![query9result](Project_Sales_Analysis/assets/Prod9.PNG)
+![query9result](Project_Sales_Analysis/assets1/Prod9.PNG)
 
 
 **10.Gender Preferences:** Fashion accessories are particularly popular among female shoppers, while health and beauty products are favored by males, highlighting gender-specific market trends for targeted advertising.
 
-![query10result](Project_Sales_Analysis/assets/Prod10.PNG)
+![query10result](Project_Sales_Analysis/assets1/Prod10.PNG)
 
 
 **11.Customer Satisfaction:** Average product line ratings are indicative of customer satisfaction and can inform quality improvements or highlight strengths.Food and beverages receive the highest customer ratings at Walmart, indicating strong satisfaction.
 
-![query11result](Project_Sales_Analysis/assets/Prod11.PNG)
+![query11result](Project_Sales_Analysis/assets1/Prod11.PNG)
 
 
 **12.Payment Methods:** The most common payment method can influence transaction processing improvements and customer experience initiatives. We can see that cash and eWallet are nearly tied as the preferred payment methods, signaling a potential shift in payment trends.
 
-![query12result](Project_Sales_Analysis/assets/Prod12.PNG)
+![query12result](Project_Sales_Analysis/assets1/Prod12.PNG)
 
 
 # Customer Analysis:
@@ -338,45 +338,46 @@ ORDER BY branch, avg_rating DESC;
 
 ## Insights:
 
-
-
  **1.Most Common Customer Type:** Membership programs appear to edge out slightly, indicating potential for loyalty-driven sales strategies.
 
- ![query1](Project_Sales_Analysis\assets2\Cust1.PNG)
+ ![query1](Project_Sales_Analysis/assets2/Cust1.PNG)
 
  **2.Which Customer Type Buys the Most:** Members lead in purchase volume, highlighting the success of membership incentives in driving sales.
 
-![query2](Project_Sales_Analysis\assets2\Cust2.PNG)
+![query2](Project_Sales_Analysis/assets2/Cust2.PNG)
 
 
  **3.Gender of Most Customers:** Gender distribution among customers is balanced, suggesting an inclusive market appeal across products.
 
- ![quer3](Project_Sales_Analysis\assets2\Cust3.PNG)
+ ![quer3](Project_Sales_Analysis/assets2/Cust3.PNG)
 
  **4.Gender Distribution Per Branch:** Gender ratios across branches are consistent, indicating uniform marketing effectiveness.
 
-![query4](Project_Sales_Analysis\assets2\Cust4.PNG)
+![query4](Project_Sales_Analysis/assets2/Cust4.PNG)
 
 
 **5.Time of Day with Most Ratings:** Afternoon sessions see higher customer engagement, suggesting an opportune time for soliciting feedback.
 
-![query](Project_Sales_Analysis\assets2\Cust5.PNG)
+![query](Project_Sales_Analysis/assets2/Cust5.PNG)
 
 
 **6.Ratings Per Time of Day per Branch:** Evening ratings peak at Branch C, implying customer satisfaction aligns with end-of-day shopping experiences.
 
-![query6](Project_Sales_Analysis\assets2\Cust6.PNG)
+![query6](Project_Sales_Analysis/assets2/Cust6.PNG)
 
 
  **7.Best Average Ratings by Day of the Week:** Mondays receive the highest ratings, pointing to a strong start of the week in customer satisfaction.
 
- ![query7](Project_Sales_Analysis\assets2\Cust7.PNG)
+ ![query7](Project_Sales_Analysis/assets2/Cust7.PNG)
 
 
  **8.Best Average Ratings by Day of the Week Per Branch:** Each branch shows distinct peak days for customer ratings, indicating varying customer behaviors by location.
 
- ![query8](Project_Sales_Analysis\assets2\Cust8.PNG)
+ ![query8](Project_Sales_Analysis/assets2/Cust8.PNG)
 
+# Sales Analysis:
+
+This analysis aims to answer the question of the sales trends of product. The result of this can help use measure the effectiveness of each sales strategy the business applies and what modificatoins are needed to gain more sales.
 
 
 
