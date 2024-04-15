@@ -468,47 +468,47 @@ Certainly! Here are the revised insights with concise titles:
 
 1. **Peak Sales Times:** Weekends, especially Saturday evenings, are the busiest sales periods, indicating potential for targeted promotions during these times.
 
-![query1](Project_Sales_Analysis\assets3\sales1.PNG)
+![query1](Project_Sales_Analysis/assets3/sales1.PNG)
 
 
 2. **Top Revenue Customers:** Members contribute more to the revenue, suggesting loyalty programs could be effective.
 
-![query2](Project_Sales_Analysis\assets3\sales2.PNG)
+![query2](Project_Sales_Analysis/assets3/sales2.PNG)
 
 3. **Tax Consistency Across Cities:** The tax percentage is consistent across cities, indicating uniform pricing strategies can be maintained.
 
-![query3](Project_Sales_Analysis\assets3\sales3.PNG)
+![query3](Project_Sales_Analysis/assets3/sales3.PNG)
 
 4. **VAT Contributions:** Members pay slightly more in VAT than normal customers, possibly due to purchasing higher-priced or more items.
 
-![query4](Project_Sales_Analysis\assets3\sales4.PNG)
+![query4](Project_Sales_Analysis/assets3/sales4.PNG)
 
 
 5. **Sales Volume by Hour:** Late afternoons and early evenings, particularly around 7 PM, show peak sales activity, a key time for staffing and customer engagement.
 
-![query5](Project_Sales_Analysis\assets3\sales5.PNG)
+![query5](Project_Sales_Analysis/assets3/sales5.PNG)
 
 6. **Profitable Product Lines:** Food and beverages lead in profitability, suggesting inventory and marketing investment in this area may yield higher returns.
 
-![query6](Project_Sales_Analysis\assets3\sales6.PNG)
+![query6](Project_Sales_Analysis/assets3/sales6.PNG)
 
 7. **Highest Value Sales:** Fashion accessories had the highest single transaction value, highlighting potential for high-ticket sales in this category.
 
-![query7](Project_Sales_Analysis\assets3\sales7.PNG)
+![query7](Project_Sales_Analysis/assets3/sales7.PNG)
 
 
 8. **Best Sales Days:** Saturdays lead in total sales, aligning with common leisure shopping habits.
 
-![query8](Project_Sales_Analysis\assets3\sales8.PNG)
+![query8](Project_Sales_Analysis/assets3/sales8.PNG)
 
 
 9. **Customer Satisfaction:** Food and beverages, along with fashion accessories, have high customer satisfaction ratings, indicating strong market acceptance.
 
-![query9](Project_Sales_Analysis\assets3\sales9.PNG)
+![query9](Project_Sales_Analysis/assets3/sales9.PNG)
 
 10. **Branch Performance:**  Branch C shows the highest average daily sales, suggesting effective sales strategies or a prime location.
 
-![query10](Project_Sales_Analysis\assets3\sales10.PNG)
+![query10](Project_Sales_Analysis/assets3/sales10.PNG)
 
 
 
