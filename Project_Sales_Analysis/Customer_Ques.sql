@@ -26,12 +26,13 @@ ORDER BY gender_cnt DESC;
 
 -- 4. What is the gender distribution per branch?
 SELECT
-	gender,
-	COUNT(*) as gender_cnt
+  branch,
+  gender,
+  COUNT(*) as gender_count
 FROM sales
-WHERE branch = "C"
-GROUP BY gender
-ORDER BY gender_cnt DESC;
+GROUP BY branch, gender
+ORDER BY branch, gender_count DESC;
+
 -- Gender per branch is more or less the same hence, I don't think has
 -- an effect of the sales per branch and other factors.
 
@@ -42,18 +43,20 @@ SELECT
 FROM sales
 GROUP BY time_of_day
 ORDER BY avg_rating DESC;
+
 -- Looks like time of the day does not really affect the rating, its
 -- more or less the same rating each time of the day.
 
 
 -- 6. Which time of the day do customers give most ratings per branch?
 SELECT
-	time_of_day,
-	AVG(rating) AS avg_rating
+  branch,
+  time_of_day,
+  AVG(rating) AS avg_rating
 FROM sales
-WHERE branch = "A"
-GROUP BY time_of_day
-ORDER BY avg_rating DESC;
+GROUP BY branch, time_of_day
+ORDER BY branch, avg_rating DESC;
+
 -- Branch A and C are doing well in ratings, branch B needs to do a 
 -- little more to get better ratings.
 
@@ -71,9 +74,9 @@ ORDER BY avg_rating DESC;
 
 -- 8. Which day of the week has the best average ratings per branch?
 SELECT 
-	day_name,
-	COUNT(day_name) total_sales
+  branch,
+  day_name,
+  AVG(rating) AS avg_rating
 FROM sales
-WHERE branch = "C"
-GROUP BY day_name
-ORDER BY total_sales DESC;
+GROUP BY branch, day_name
+ORDER BY branch, avg_rating DESC;

@@ -249,7 +249,6 @@ This analysis seeks to decipher the sales trends across various product categori
 
 ## Business Questions Answered:
 
-## Business Questions Answered:
 
 1. What is the most common customer type?
 2. Which customer type buys the most?
@@ -262,13 +261,13 @@ This analysis seeks to decipher the sales trends across various product categori
 
 ```sql
 -- 1. Which are the most common customer types?
-
 SELECT
   customer_type,
   COUNT(*) AS count
 FROM sales
 GROUP BY customer_type
 ORDER BY count DESC;
+
 
 -- 2. Which customer type buys the most?
 SELECT
@@ -288,14 +287,16 @@ FROM sales
 GROUP BY gender
 ORDER BY gender_cnt DESC;
 
+
 -- 4. What is the gender distribution per branch?
 SELECT
-	gender,
-	COUNT(*) as gender_cnt
+  branch,
+  gender,
+  COUNT(*) as gender_count
 FROM sales
-WHERE branch = "C"
-GROUP BY gender
-ORDER BY gender_cnt DESC;
+GROUP BY branch, gender
+ORDER BY branch, gender_count DESC;
+
 
 -- 5. Which time of the day do customers give most ratings?
 SELECT
@@ -305,32 +306,76 @@ FROM sales
 GROUP BY time_of_day
 ORDER BY avg_rating DESC;
 
+
 -- 6. Which time of the day do customers give most ratings per branch?
 SELECT
-	time_of_day,
-	AVG(rating) AS avg_rating
+  branch,
+  time_of_day,
+  AVG(rating) AS avg_rating
 FROM sales
-WHERE branch = "A"
-GROUP BY time_of_day
-ORDER BY avg_rating DESC;
+GROUP BY branch, time_of_day
+ORDER BY branch, avg_rating DESC;
+
 
 -- 7. Which day fo the week has the best avg ratings?
-SELECT
-	day_name,
-	AVG(rating) AS avg_rating
+SELECT 
+  day_name,
+  AVG(rating) AS avg_rating
 FROM sales
-GROUP BY day_name 
-ORDER BY avg_rating DESC;
+GROUP BY day_name
+ORDER BY avg_rating DESC
+
 
 -- 8. Which day of the week has the best average ratings per branch?
 SELECT 
-	day_name,
-	COUNT(day_name) total_sales
+  branch,
+  day_name,
+  AVG(rating) AS avg_rating
 FROM sales
-WHERE branch = "C"
-GROUP BY day_name
-ORDER BY total_sales DESC;
+GROUP BY branch, day_name
+ORDER BY branch, avg_rating DESC;
 ```
+
+## Insights:
+
+
+
+ **1.Most Common Customer Type:** Membership programs appear to edge out slightly, indicating potential for loyalty-driven sales strategies.
+
+ ![query1](Project_Sales_Analysis\assets2\Cust1.PNG)
+
+ **2.Which Customer Type Buys the Most:** Members lead in purchase volume, highlighting the success of membership incentives in driving sales.
+
+![query2](Project_Sales_Analysis\assets2\Cust2.PNG)
+
+
+ **3.Gender of Most Customers:** Gender distribution among customers is balanced, suggesting an inclusive market appeal across products.
+
+ ![quer3](Project_Sales_Analysis\assets2\Cust3.PNG)
+
+ **4.Gender Distribution Per Branch:** Gender ratios across branches are consistent, indicating uniform marketing effectiveness.
+
+![query4](Project_Sales_Analysis\assets2\Cust4.PNG)
+
+
+**5.Time of Day with Most Ratings:** Afternoon sessions see higher customer engagement, suggesting an opportune time for soliciting feedback.
+
+![query](Project_Sales_Analysis\assets2\Cust5.PNG)
+
+
+**6.Ratings Per Time of Day per Branch:** Evening ratings peak at Branch C, implying customer satisfaction aligns with end-of-day shopping experiences.
+
+![query6](Project_Sales_Analysis\assets2\Cust6.PNG)
+
+
+ **7.Best Average Ratings by Day of the Week:** Mondays receive the highest ratings, pointing to a strong start of the week in customer satisfaction.
+
+ ![query7](Project_Sales_Analysis\assets2\Cust7.PNG)
+
+
+ **8.Best Average Ratings by Day of the Week Per Branch:** Each branch shows distinct peak days for customer ratings, indicating varying customer behaviors by location.
+
+ ![query8](Project_Sales_Analysis\assets2\Cust8.PNG)
 
 
 
