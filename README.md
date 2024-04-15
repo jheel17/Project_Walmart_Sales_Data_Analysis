@@ -63,7 +63,6 @@ The project is segmented into various analyses, each focusing on specific aspect
 
 - **Exploratory Data Analysis (EDA)**: In-depth data probing to respond to the investigative queries listed.
 
-
 # Product Analysis: 
 
 Conducted analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
@@ -466,86 +465,70 @@ GROUP BY branch;
 
 Certainly! Here are the revised insights with concise titles:
 
-1. **Peak Sales Times:** Weekends, especially Saturday evenings, are the busiest sales periods, indicating potential for targeted promotions during these times.
+**1.Peak Sales Times:** Weekends, especially Saturday evenings, are the busiest sales periods, indicating potential for targeted promotions during these times.
 
 ![query1](Project_Sales_Analysis/assets3/sales1.PNG)
 
 
-2. **Top Revenue Customers:** Members contribute more to the revenue, suggesting loyalty programs could be effective.
+**2.Top Revenue Customers:** Members contribute more to the revenue, suggesting loyalty programs could be effective.
 
 ![query2](Project_Sales_Analysis/assets3/sales2.PNG)
 
-3. **Tax Consistency Across Cities:** The tax percentage is consistent across cities, indicating uniform pricing strategies can be maintained.
+**3.Tax Consistency Across Cities:** The tax percentage is consistent across cities, indicating uniform pricing strategies can be maintained.
 
 ![query3](Project_Sales_Analysis/assets3/sales3.PNG)
 
-4. **VAT Contributions:** Members pay slightly more in VAT than normal customers, possibly due to purchasing higher-priced or more items.
+**4.VAT Contributions:** Members pay slightly more in VAT than normal customers, possibly due to purchasing higher-priced or more items.
 
 ![query4](Project_Sales_Analysis/assets3/sales4.PNG)
 
 
-5. **Sales Volume by Hour:** Late afternoons and early evenings, particularly around 7 PM, show peak sales activity, a key time for staffing and customer engagement.
+**5.Sales Volume by Hour:** Late afternoons and early evenings, particularly around 7 PM, show peak sales activity, a key time for staffing and customer engagement.
 
 ![query5](Project_Sales_Analysis/assets3/sales5.PNG)
 
-6. **Profitable Product Lines:** Food and beverages lead in profitability, suggesting inventory and marketing investment in this area may yield higher returns.
+**6.Profitable Product Lines:** Food and beverages lead in profitability, suggesting inventory and marketing investment in this area may yield higher returns.
 
 ![query6](Project_Sales_Analysis/assets3/sales6.PNG)
 
-7. **Highest Value Sales:** Fashion accessories had the highest single transaction value, highlighting potential for high-ticket sales in this category.
+**7.Highest Value Sales:** Fashion accessories had the highest single transaction value, highlighting potential for high-ticket sales in this category.
 
 ![query7](Project_Sales_Analysis/assets3/sales7.PNG)
 
 
-8. **Best Sales Days:** Saturdays lead in total sales, aligning with common leisure shopping habits.
+**8.Best Sales Days:** Saturdays lead in total sales, aligning with common leisure shopping habits.
 
 ![query8](Project_Sales_Analysis/assets3/sales8.PNG)
 
 
-9. **Customer Satisfaction:** Food and beverages, along with fashion accessories, have high customer satisfaction ratings, indicating strong market acceptance.
+**9.Customer Satisfaction:** Food and beverages, along with fashion accessories, have high customer satisfaction ratings, indicating strong market acceptance.
 
 ![query9](Project_Sales_Analysis/assets3/sales9.PNG)
 
-10. **Branch Performance:**  Branch C shows the highest average daily sales, suggesting effective sales strategies or a prime location.
+**10.Branch Performance:**  Branch C shows the highest average daily sales, suggesting effective sales strategies or a prime location.
 
 ![query10](Project_Sales_Analysis/assets3/sales10.PNG)
 
 
+# Business Insights:
 
+- This in-depth analysis of Walmart's sales data offers valuable insights into the nuances of customer behavior, product popularity, and sales performance across various branches and times. 
 
+- Key findings reveal that electronic accessories and food and beverages are standout categories, driving both volume and profitability. 
 
+- Customer loyalty, as reflected in the purchasing patterns of members, appears to be a significant driver of revenue, advocating for a strengthened focus on loyalty programs. 
 
+- Moreover, the consistency in tax percentages across cities simplifies the pricing strategy across regions.
 
+- Saturday emerged as the prime day for sales, indicating the importance of strategic staff scheduling and targeted promotions to leverage these peak periods. 
 
+- Evening hours were consistently the busiest across all branches, providing a window of opportunity for maximized sales efforts.
 
+- The gender distribution was notably balanced, suggesting an all-inclusive market appeal of Walmart's product assortment. 
 
+- However, distinct preferences in product lines between genders highlight opportunities for personalized marketing campaigns.
 
+# Conclusion:
 
+Throughout this Walmart Sales Data Analysis project, I've expanded my skill set in several key areas. By leveraging MySQL, I've deepened my understanding of database queries and data analysis, gleaning insights from complex data sets. Visual Studio Code was an excellent ally, enhancing my code-writing efficiency, while GitHub played a crucial role in version control and repository management, teaching me the intricacies of collaboration and project tracking in a real-world tech environment. This hands-on experience has not only broadened my technical expertise but also sharpened my problem-solving and analytical thinking abilities.
 
-
-
-
-
-
-
-
-
-## Conclusions and Business Insights
-
-Through meticulous analysis, the project addresses a suite of pertinent business queries, providing vital insights for strategic sales and marketing alignment.
-
-## Revenue and Profit Calculations
-
-The project incorporates a detailed financial computation framework, from calculating the COGS to deducing the Gross Margin percentage, a critical metric for evaluating sales profitability.
-
-## Acknowledgements
-
-The data utilized in this project is accredited to the Kaggle Walmart Sales Forecasting Competition. The insights generated here are intended to supplement Walmart's strategic sales initiatives and are a testament to the power of data in guiding business strategy.
-
----
-
-For more insights and a complete overview of the analysis, visit the project repository [here](<insert your GitHub repository link>).
-
-```
-
-Feel free to replace `<insert your GitHub repository link>` with the actual URL to your repository. This README is designed to provide a comprehensive and professional introduction to your project, perfect for stakeholders looking to understand your work at a glance.
