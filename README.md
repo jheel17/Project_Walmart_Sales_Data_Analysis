@@ -268,7 +268,6 @@ FROM sales
 GROUP BY customer_type
 ORDER BY count DESC;
 
-
 -- 2. Which customer type buys the most?
 SELECT
   customer_type,
@@ -278,7 +277,6 @@ GROUP BY customer_type
 ORDER BY total_quantity DESC
 LIMIT 1;
 
-
 -- 3. What is the gender of most of the customers?
 SELECT
 	gender,
@@ -286,7 +284,6 @@ SELECT
 FROM sales
 GROUP BY gender
 ORDER BY gender_cnt DESC;
-
 
 -- 4. What is the gender distribution per branch?
 SELECT
@@ -297,7 +294,6 @@ FROM sales
 GROUP BY branch, gender
 ORDER BY branch, gender_count DESC;
 
-
 -- 5. Which time of the day do customers give most ratings?
 SELECT
 	time_of_day,
@@ -305,7 +301,6 @@ SELECT
 FROM sales
 GROUP BY time_of_day
 ORDER BY avg_rating DESC;
-
 
 -- 6. Which time of the day do customers give most ratings per branch?
 SELECT
@@ -316,7 +311,6 @@ FROM sales
 GROUP BY branch, time_of_day
 ORDER BY branch, avg_rating DESC;
 
-
 -- 7. Which day fo the week has the best avg ratings?
 SELECT 
   day_name,
@@ -324,7 +318,6 @@ SELECT
 FROM sales
 GROUP BY day_name
 ORDER BY avg_rating DESC
-
 
 -- 8. Which day of the week has the best average ratings per branch?
 SELECT 
@@ -375,9 +368,153 @@ ORDER BY branch, avg_rating DESC;
 
  ![query8](Project_Sales_Analysis/assets2/Cust8.PNG)
 
+
 # Sales Analysis:
 
 This analysis aims to answer the question of the sales trends of product. The result of this can help use measure the effectiveness of each sales strategy the business applies and what modificatoins are needed to gain more sales.
+
+## Business Questions Answered:
+
+1. Number of sales made in each time of the day per weekday
+2. Which of the customer types brings the most revenue?
+3. Which city has the largest tax percent/ VAT (Value Added Tax)?
+4. Which customer type pays the most in VAT?
+5. Which hour of the day experiences the highest sales volume?
+6. Which product line is the most profitable?
+7. Which product line had the single highest-value transaction?
+9. On which day of the week are sales the highest?
+10. Which product lines have above-average customer ratings?
+12. Which branch has the highest average daily sales?
+
+```sql
+-- 1.Number of sales made in each time of the day per weekday:
+SELECT 
+  DAYNAME(date) AS weekday, 
+  time_of_day, 
+  COUNT(*) AS sales_count
+FROM sales
+GROUP BY weekday, time_of_day
+ORDER BY weekday, sales_count DESC;
+
+-- 2.Which of the customer types brings the most revenue?
+SELECT 
+  customer_type, 
+  SUM(total) AS total_revenue
+FROM sales
+GROUP BY customer_type
+ORDER BY total_revenue DESC;
+
+-- 3.Which city has the largest tax/VAT percent?
+SELECT 
+  city, 
+  (SUM(tax_pct)/SUM(total)) * 100 AS average_tax_percent
+FROM sales
+GROUP BY city
+ORDER BY average_tax_percent DESC;
+
+-- 4.Which customer type pays the most in VAT?
+SELECT 
+  customer_type, 
+  SUM(tax_pct) AS total_tax_paid
+FROM sales
+GROUP BY customer_type
+ORDER BY total_tax_paid DESC;
+
+-- 5. Which hour of the day experiences the highest sales volume?
+
+SELECT HOUR(time) AS hour, SUM(total) AS sales_volume
+FROM sales
+GROUP BY hour
+ORDER BY sales_volume DESC;
+
+-- 6. Which product line is the most profitable?
+
+SELECT product_line, SUM(total - cogs) AS profit
+FROM sales
+GROUP BY product_line
+ORDER BY profit DESC;
+
+-- 7. Which product line had the single highest-value transaction?
+
+SELECT product_line, MAX(total) AS highest_sale
+FROM sales
+GROUP BY product_line
+ORDER BY highest_sale DESC;
+
+-- 8. On which day of the week are sales the highest?
+
+SELECT DAYNAME(date) AS weekday, SUM(total) AS total_sales
+FROM sales
+GROUP BY weekday
+ORDER BY total_sales DESC;
+
+-- 9. Which product lines have above-average customer ratings?
+
+SELECT product_line, AVG(rating) AS avg_rating
+FROM sales
+GROUP BY product_line
+HAVING avg_rating > (SELECT AVG(rating) FROM sales);
+
+-- 10. Which branch has the highest average daily sales?
+
+SELECT branch, SUM(total) / COUNT(DISTINCT date) AS avg_daily_sales
+FROM sales
+GROUP BY branch;
+```
+
+## Insights:    
+
+Certainly! Here are the revised insights with concise titles:
+
+1. **Peak Sales Times:** Weekends, especially Saturday evenings, are the busiest sales periods, indicating potential for targeted promotions during these times.
+
+![query1](Project_Sales_Analysis\assets3\sales1.PNG)
+
+
+2. **Top Revenue Customers:** Members contribute more to the revenue, suggesting loyalty programs could be effective.
+
+![query2](Project_Sales_Analysis\assets3\sales2.PNG)
+
+3. **Tax Consistency Across Cities:** The tax percentage is consistent across cities, indicating uniform pricing strategies can be maintained.
+
+![query3](Project_Sales_Analysis\assets3\sales3.PNG)
+
+4. **VAT Contributions:** Members pay slightly more in VAT than normal customers, possibly due to purchasing higher-priced or more items.
+
+![query4](Project_Sales_Analysis\assets3\sales4.PNG)
+
+
+5. **Sales Volume by Hour:** Late afternoons and early evenings, particularly around 7 PM, show peak sales activity, a key time for staffing and customer engagement.
+
+![query5](Project_Sales_Analysis\assets3\sales5.PNG)
+
+6. **Profitable Product Lines:** Food and beverages lead in profitability, suggesting inventory and marketing investment in this area may yield higher returns.
+
+![query6](Project_Sales_Analysis\assets3\sales6.PNG)
+
+7. **Highest Value Sales:** Fashion accessories had the highest single transaction value, highlighting potential for high-ticket sales in this category.
+
+![query7](Project_Sales_Analysis\assets3\sales7.PNG)
+
+
+8. **Best Sales Days:** Saturdays lead in total sales, aligning with common leisure shopping habits.
+
+![query8](Project_Sales_Analysis\assets3\sales8.PNG)
+
+
+9. **Customer Satisfaction:** Food and beverages, along with fashion accessories, have high customer satisfaction ratings, indicating strong market acceptance.
+
+![query9](Project_Sales_Analysis\assets3\sales9.PNG)
+
+10. **Branch Performance:**  Branch C shows the highest average daily sales, suggesting effective sales strategies or a prime location.
+
+![query10](Project_Sales_Analysis\assets3\sales10.PNG)
+
+
+
+
+
+
 
 
 
